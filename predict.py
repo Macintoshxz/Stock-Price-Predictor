@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.svm import SVR
 import matplotlib.pyplot as plt
 
-plt.switch_backend('pdf') 
+plt.switch_backend('TkAgg') 
 
 dates = []
 prices = []
@@ -34,7 +34,7 @@ def  predict_price(dates,prices,x):
 	plt.plot(dates,svr_lin.predict(dates),color='green',label='Linear model')
 	plt.plot(dates,svr_poly.predict(dates),color='blue',label='Polynomial model')
 	plt.xlabel('Date')
-	plt.xlabel('Price')
+	plt.ylabel('Price')
 	plt.title('SVR Plot')
 	plt.legend()
 	plt.show()
